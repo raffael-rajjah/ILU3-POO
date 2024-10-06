@@ -10,8 +10,7 @@ public abstract class Probleme extends Carte {
 		this.type = type;
 	}
 
-	@Override
-	public String toString() {
-		return "Probleme";
+	public Type getType() {
+		return type;
 	}
 }

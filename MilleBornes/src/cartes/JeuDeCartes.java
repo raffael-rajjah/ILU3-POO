@@ -26,16 +26,15 @@ public class JeuDeCartes {
 	public String affichageJeuDeCartes() {
 		StringBuilder sb = new StringBuilder();
 		
-//		int temp = 0;
-		
-		sb.append("JEU : \n");
+
+	
 		for (int i = 0; i < typesDeCartes.length; i++) {
 			sb.append(typesDeCartes[i].getNbExemplaires());
 			sb.append(" " + typesDeCartes[i].getCarte().toString() + "\n");
-//			temp += typesDeCartes[i].nbExemplaires;
+
 		}
 		
-//		System.out.println("total exemplaire : " + temp);
+
 		return sb.toString();
 	}
 	

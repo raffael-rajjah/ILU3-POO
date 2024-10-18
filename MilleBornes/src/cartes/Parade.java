@@ -12,4 +12,9 @@ public class Parade extends Bataille {
 		return super.getType().getParade();
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		return super.equals(obj);
+	}
+	
 }

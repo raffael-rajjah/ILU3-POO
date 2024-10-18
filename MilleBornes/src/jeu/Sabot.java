@@ -62,6 +62,8 @@ public class Sabot implements Iterable<Carte>{
 		private boolean nextEffectue = false;
 
 		public boolean hasNext(){
+			verificationConcurrence();
+
 			return indiceIterateur < nbCartes;
 		}
 		

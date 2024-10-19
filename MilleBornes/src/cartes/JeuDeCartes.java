@@ -38,7 +38,7 @@ public class JeuDeCartes {
 		return sb.toString();
 	}
 	
-	 public Carte[] donnerCartes() {
+	public Carte[] donnerCartes() {
 		 
 		 int total = 106;
 		 Carte [] toutesLesCartes = new Carte[total];
@@ -55,7 +55,25 @@ public class JeuDeCartes {
 		 return toutesLesCartes;
 	 }
 	 
-	 private class Configuration {
+	public boolean checkCount() {
+		Carte[] cartes = donnerCartes();
+		
+		int iterateurCarte = 0;
+		
+		for(int i = 0; i < typesDeCartes.length; i++) {
+			for(int j = 0; j < typesDeCartes[i].nbExemplaires; j++) {
+				if(!cartes[iterateurCarte].equals(typesDeCartes[i].getCarte())) {
+					return false;
+				}
+				
+				iterateurCarte++;
+			}
+		}
+		
+		return true;
+	}
+	 
+	private class Configuration {
 			private int nbExemplaires;
 			private Carte carte;
 

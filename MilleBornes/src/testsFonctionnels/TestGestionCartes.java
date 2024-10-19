@@ -21,6 +21,8 @@ public class TestGestionCartes {
 		System.out.println(listeCartes);
 		System.out.println(
 				"liste m�lang�e sans erreur ? " + GestionCartes.verifierMelange(listeCarteNonMelangee, listeCartes));
+
+		
 		listeCartes = GestionCartes.rassembler(listeCartes);
 		System.out.println(listeCartes);
 		System.out.println("liste rassembl�e sans erreur ? " + GestionCartes.verifierRassemblement(listeCartes));

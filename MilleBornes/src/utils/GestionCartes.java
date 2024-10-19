@@ -86,22 +86,26 @@ public class GestionCartes {
 		
         ListIterator<E> iterator1 = liste.listIterator();
         ListIterator<E> iterator2;
+        
 		
         E elementAvant = liste.getFirst();
+        E elementNow;
         E elementNext;
         
-        for (int i = 1; i < liste.size(); i++) {
-			if(!liste.get(i).equals(elementAvant)) {
-				iterator2 = liste.listIterator(i+1);
+        while (iterator1.hasNext()) {
+        	elementNow = iterator1.next();
+			if(!elementNow.equals(elementAvant)) {
+				iterator2 = liste.listIterator(iterator1.nextIndex());
 				
 				while(iterator2.hasNext()) {
 					elementNext = iterator2.next();
 					if(elementNext.equals(elementAvant)) {
 						return false;
 					}
+					
 				}
+				elementAvant = elementNow;
 				
-				elementAvant = liste.get(i);
 			}
 		}
         

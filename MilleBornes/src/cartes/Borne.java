@@ -23,5 +23,11 @@ public class Borne extends Carte {
 		Borne other = (Borne) obj;
 		return this.km == other.km;
 	}
+
+	public int getKm() {
+		return km;
+	}
+	
+	
 	
 }

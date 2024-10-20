@@ -8,9 +8,10 @@ public class Joueur {
 	private ZoneDeJeu zoneDeJeu;
 	private MainJoueur main;
 	
-	public Joueur(String nom, ZoneDeJeu zoneDeJeu) {
+	public Joueur(String nom, ZoneDeJeu zoneDeJeu, MainJoueur main) {
 		this.nom = nom;
 		this.zoneDeJeu = zoneDeJeu;
+		this.main = main;
 	}
 	
 	@Override
@@ -42,6 +43,10 @@ public class Joueur {
 		}
 		
 		return sabot.piocher();
+	}
+	
+	public int donnerKmParcourus() {
+		return zoneDeJeu.donnerKmParcourus();
 	}
 	
 }

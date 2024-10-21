@@ -45,7 +45,7 @@ public class TestSabot {
 			System.out.println("Je pioche " + carte);
 			iterator.remove();
 //			cartePiochee = sabot.piocher();
-			sabot.ajouterCarte(new Botte(cartes.Type.ACCIDENT));
+//			sabot.ajouterCarte(new Botte(cartes.Type.ACCIDENT));
 		}
 		Iterator<Carte> iterator = sabot.iterator();
 		System.out.println("\nLa pioche contient encore des cartes ? " + iterator.hasNext());

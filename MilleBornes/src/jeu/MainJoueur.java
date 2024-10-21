@@ -1,11 +1,12 @@
 package jeu;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
 import cartes.Carte;
 
-public class MainJoueur {
+public class MainJoueur extends Carte implements Iterable<Carte>{
 
 	List<Carte> cartesEnMain;
 	
@@ -31,6 +32,14 @@ public class MainJoueur {
 		
 		return sb.toString();
 	}
+
+	@Override
+	public Iterator<Carte> iterator() {
+		return cartesEnMain.iterator() ;
+	}
+	
+	
+	
 	
 	
 	

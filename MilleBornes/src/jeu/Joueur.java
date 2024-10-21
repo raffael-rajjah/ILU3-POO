@@ -1,8 +1,10 @@
 package jeu;
 
+import java.util.Iterator;
+
 import cartes.Carte;
 
-public class Joueur {
+public class Joueur extends Carte {
 	
 	private String nom;
 	private ZoneDeJeu zoneDeJeu;
@@ -51,6 +53,10 @@ public class Joueur {
 	
 	public boolean estDepotAutorise(Carte carte) {
 		return zoneDeJeu.estDepotAutorise(carte);
+	}
+	
+	public Iterator<Carte> itMain(){
+		return main.iterator();
 	}
 	
 }

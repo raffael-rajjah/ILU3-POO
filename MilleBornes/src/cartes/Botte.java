@@ -15,6 +15,11 @@ public class Botte extends Probleme {
 	public boolean equals(Object obj) {
 		return super.equals(obj);
 	}
+	
+	@Override
+	public int hashCode() {
+		return this.getType().hashCode() * 31;
+	}
 
 
 }

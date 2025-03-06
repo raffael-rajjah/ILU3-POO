@@ -69,7 +69,10 @@ public class ZoneDeJeu {
 		else if(carte instanceof Botte botte) {
 			ensembleBottes.add(botte);
 		}
+		
 	}
+	
+
 	
 	
 	private <E> E getSommet(List<E> liste) {

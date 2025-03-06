@@ -1,6 +1,8 @@
 package jeu;
 
 import java.util.Iterator;
+import java.util.HashSet;
+import java.util.Set;
 
 import cartes.Carte;
 
@@ -58,5 +60,6 @@ public class Joueur extends Carte {
 	public Iterator<Carte> itMain(){
 		return main.iterator();
 	}
+	
 	
 }
